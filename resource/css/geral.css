@@ -1,0 +1,62 @@
+*{font-family: Tahome, sans-serif; color: #333333;}
+body{   margin:0px;  padding:0px; }
+input, textarea, select{border: 1px #cccccc solid;}
+fieldset{border: 1px  #cccccc solid; margin: 10px;}
+fieldset legend{color: #666666; font-size: 11pt;}
+
+div#geral{
+    //width: auto;
+    position: absolute;
+    //overflow: hidden;
+    border: 1px  #3399ff solid; margin: 10px;
+}
+
+header#topo{
+    height: 50px;
+    
+}
+div#lateral{
+    position: relative;
+    float: left;
+    width: 75px;
+    height: 550px;
+    background-color: #3399ff;
+}
+div#conteudo{
+    float: right;
+    margin: 0 auto;
+    width: 675px;
+}
+
+footer#rodape{
+    clear: both;
+    height: 25px;
+    background-color: #3399ff;
+    color: #ffffff;
+    font-size: 9pt;
+    text-align: center;
+}
+
+
+table.campos{
+    font-size: 10pt;
+}
+table.campos td{
+    vertical-align: top;
+}
+
+input.botao{
+
+    float: right;
+    margin: 5px;
+    height: 25px;
+    color: #3399ff;
+    background-color: #ffffff;
+    border: 1px #3399ff solid;
+}
+div.botoes{
+
+}
+
+label { display: block; margin-top: 10px; } 
+label.error { float: none; color: red; margin: 0 .5em 0 0; vertical-align: top; font-size: 10px } 

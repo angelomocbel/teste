@@ -1,0 +1,65 @@
+*{font-family: Tahome, sans-serif; color: #333333;}
+input, textarea, select{border: 1px #cccccc solid;}
+fieldset{border: 1px  #cccccc solid; margin: 10px;}
+fieldset legend{color: #666666; font-size: 11pt;}
+input.botao{
+    float: right;
+    margin: 5px;
+    height: 25px;
+    color: #3399ff;
+    background-color: #ffffff;
+    border: 1px #3399ff solid;
+}
+
+table#geral{
+    border-spacing: 0;
+    width: 900px;
+    height: 600px;
+    min-height: 600px;
+}
+
+table#geral td{
+    
+}
+
+td#banner{
+    
+    height: 75px;
+    border: 1px  #96281B solid;
+}
+td#menu{
+    width: 75px;
+    background-color: #96281B;  
+}
+
+ul#opcoes{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ul#opcoes li{
+    
+}
+
+td#conteudo{
+    padding: 20px;
+}
+
+td#titulo{
+    margin: 20px;
+    font-size: 16pt;
+    color: #96281B;
+    height: 50px;
+}
+
+td#rodape{
+    clear: both;
+    height: 25px;
+    background-color: #96281B;
+    color: #ffffff;
+    font-size: 9pt;
+    text-align: center;
+}
+
+label { display: block; margin-top: 10px; } 
+label.error { float: none; color: red; margin: 0 .5em 0 0; vertical-align: top; font-size: 10px } 

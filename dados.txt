@@ -1,0 +1,7 @@
+nome completo
+CPF
+numero do processo
+especie de processo
+data e hora de audiencia
+pericia médica
+quadro com pendencias de documentos
