@@ -1,3 +1,4 @@
+body{ margin:0;}
 *{font-family: Tahome, sans-serif; color: #333333;}
 input, textarea, select{border: 1px #cccccc solid;}
 fieldset{border: 1px  #cccccc solid; margin: 10px;}
@@ -11,7 +12,13 @@ input.botao{
     border: 1px #3399ff solid;
 }
 
+div#corpo{
+    margin: 0 auto;
+    width: 900px;
+}
+
 table#geral{
+    border: 1px  #96281B solid;
     border-spacing: 0;
     width: 900px;
     height: 600px;
@@ -25,7 +32,7 @@ table#geral td{
 td#banner{
     
     height: 75px;
-    border: 1px  #96281B solid;
+    
 }
 td#menu{
     width: 75px;
@@ -42,11 +49,12 @@ ul#opcoes li{
 }
 
 td#conteudo{
+    
     padding: 20px;
 }
 
 td#titulo{
-    margin: 20px;
+    padding-left: 10px;
     font-size: 16pt;
     color: #96281B;
     height: 50px;

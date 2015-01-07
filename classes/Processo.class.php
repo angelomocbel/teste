@@ -13,56 +13,101 @@
  */
 //relatorios de audiencias e pericias descriminando o data, hora, cliente, processo, especia e vara.
 class Processo {
-    private $id;
     private $numero;
-    private $vara;
     private $especie;
+    private $vara;
     private $status;
+    private $data_audiencia;
+    private $data_pericia;
+    private $pendencia_doc;
+    private $obs_pendencia;
     private $cliente_id;
     
-    public function getEspecie() {
-        return $this->especie;
-    }
-
-    public function setEspecie($especie) {
-        $this->especie = $especie;
-    }
-
-        public function getCliente_id() {
-        return $this->cliente_id;
-    }
-
-    public function setCliente_id($cliente_id) {
-        $this->cliente_id = $cliente_id;
-    }
-    
-    public function getId() {
-        return $this->id;
-    }
-
-    public function getNumero() {
+    function getNumero() {
         return $this->numero;
     }
 
-    public function getStatus() {
+    function getEspecie() {
+        return $this->especie;
+    }
+
+    function getVara() {
+        return $this->vara;
+    }
+
+    function getStatus() {
         return $this->status;
     }
 
-    public function setId($id) {
-        $this->id = $id;
+    function getData_audiencia() {
+        return $this->data_audiencia;
     }
 
-    public function setNumero($numero) {
+    function getData_pericia() {
+        return $this->data_pericia;
+    }
+
+    function getPendencia_doc() {
+        return $this->pendencia_doc;
+    }
+
+    function getObs_pendencia() {
+        return $this->obs_pendencia;
+    }
+
+    function getCliente_id() {
+        return $this->cliente_id;
+    }
+
+    function setNumero($numero) {
         $this->numero = $numero;
     }
 
-    public function setStatus($status) {
-        $this->status = $status;
-    }
-
-    public function __construct($numero, $especie) {
-        $this->numero = $numero;
+    function setEspecie($especie) {
         $this->especie = $especie;
     }
 
+    function setVara($vara) {
+        $this->vara = $vara;
+    }
+
+    function setStatus($status) {
+        $this->status = $status;
+    }
+
+    function setData_audiencia($data_audiencia) {
+        $this->data_audiencia = $data_audiencia;
+    }
+
+    function setData_pericia($data_pericia) {
+        $this->data_pericia = $data_pericia;
+    }
+
+    function setPendencia_doc($pendencia_doc) {
+        $this->pendencia_doc = $pendencia_doc;
+    }
+
+    function setObs_pendencia($obs_pendencia) {
+        $this->obs_pendencia = $obs_pendencia;
+    }
+
+    function setCliente_id($cliente_id) {
+        $this->cliente_id = $cliente_id;
+    }
+    
+    public function __construct($numero, $especie, $vara, $status, $data_audiencia, $data_pericia, $pendencia_doc, $obs_pendencia, $cliente_id) {
+        $this->numero = $numero;
+        $this->especie = $especie;
+        $this->vara = $vara;
+        $this->status = $status;
+        $this->data_audiencia = $data_audiencia;
+        $this->data_pericia = $data_pericia;
+        $this->pendencia_doc = $pendencia_doc;
+        $this->obs_pendencia = $obs_pendencia;
+        $this->cliente_id = $cliente_id;
+    }
+
+
+    
+    
 }

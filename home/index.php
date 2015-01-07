@@ -16,7 +16,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-
+        <div id="corpo">
         <table id="geral" >
             <tr>
                 <td id="banner" colspan="2">Banner</td>
@@ -26,7 +26,7 @@ and open the template in the editor.
                     <ul id="opcoes">
                         <li><a title="Cadastrar Novo Cliente" href="?opcao=novo"><img src="../resource/img/novo_add.png" alt="novo_cliente"/></a></li>
                         <li><a title="Realizar Buscas" href="?opcao=busca"><img src="../resource/img/novo_search.png" alt=""/></a></li>
-                        <li><a title="Listar Todos os Clientes" href="?opcao=lista"><img src="../resource/img/novo_list.png" alt=""/></a></li>
+                        <li><a title="Exibir Relatórios" href="?opcao=lista"><img src="../resource/img/novo_list.png" alt=""/></a></li>
                         <li><a title="Configurações do Advoc" href="?opcao=config"><img src="../resource/img/novo_settings.png" alt=""/></a></li>
                     </ul>
                     
@@ -63,5 +63,6 @@ and open the template in the editor.
                 <td id="rodape" colspan="2">Rodapé</td>
             </tr>
         </table>
+        </div>
     </body>
 </html>
