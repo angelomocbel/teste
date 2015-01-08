@@ -106,6 +106,14 @@ class Processo {
         $this->obs_pendencia = $obs_pendencia;
         $this->cliente_id = $cliente_id;
     }
+    
+    
+    public function getQueryInsert(){
+        return "INSERT INTO `processo`"
+        . "(`numero`, `especie`, `vara`, `status`, `data_audiencia`, `data_pericia`, `pendencia_doc`, `osb_pendencia`, `cliente_id`) VALUES "
+        . "('$this->numero','$this->especie','$this->vara','$this->status','$this->data_audiencia',"
+        . "'$this->data_pericia,'$this->pendencia_doc','$this->obs_pendencia','$this->cliente_id');";
+    }
 
 
     
