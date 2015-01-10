@@ -187,8 +187,23 @@ class Cliente {
         $this->obs = $obs;
     }
 
-    
-    public function __toString() {
+    function getFone1() {
+        return $this->fone1;
+    }
+
+    function getFone2() {
+        return $this->fone2;
+    }
+
+    function setFone1($fone1) {
+        $this->fone1 = $fone1;
+    }
+
+    function setFone2($fone2) {
+        $this->fone2 = $fone2;
+    }
+
+        public function __toString() {
         $data = $this->getNascimento();
         $string = "Id: $this->id<br/>"
                 . "Nome: $this->nome<br/>"

@@ -1,8 +1,8 @@
 <?php
 header( 'Content-Type: text/html; charset=utf-8' );
     define("SERVIDOR", "localhost");
-    define("USUARIO", "root");
-    define("SENHA", "");
+    define("USUARIO", "teste");
+    define("SENHA", "teste");
     define("BANCO", "teste");
 class Database {
     protected $conexao = null;

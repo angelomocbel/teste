@@ -76,11 +76,13 @@ class Processo {
     }
 
     function setData_audiencia($data_audiencia) {
-        $this->data_audiencia = $data_audiencia;
+        $data = explode("-", $this->data_audiencia);
+        return $data[2].'/'.$data[1].'/'.$data[0];
     }
 
     function setData_pericia($data_pericia) {
-        $this->data_pericia = $data_pericia;
+        $data = explode("-", $this->data_pericia);
+        return $data[2].'/'.$data[1].'/'.$data[0];
     }
 
     function setPendencia_doc($pendencia_doc) {
@@ -93,7 +95,7 @@ class Processo {
 
     function setCliente_id($cliente_id) {
         $this->cliente_id = $cliente_id;
-    }
+    } 
     
     public function __construct($numero, $especie, $vara, $status, $data_audiencia, $data_pericia, $pendencia_doc, $obs_pendencia, $cliente_id) {
         $this->numero = $numero;
@@ -109,12 +111,21 @@ class Processo {
     
     
     public function getQueryInsert(){
-        return "INSERT INTO `processo`"
-        . "(`numero`, `especie`, `vara`, `status`, `data_audiencia`, `data_pericia`, `pendencia_doc`, `osb_pendencia`, `cliente_id`) VALUES "
+        return "INSERT INTO `processo` "
+        . "(`numero`, `especie`, `vara`, `status`, `data_audiencia`, `data_pericia`, `pendencia_doc`, `obs_pendencia`, `cliente_id`) VALUES "
         . "('$this->numero','$this->especie','$this->vara','$this->status','$this->data_audiencia',"
-        . "'$this->data_pericia,'$this->pendencia_doc','$this->obs_pendencia','$this->cliente_id');";
+        . "'$this->data_pericia','$this->pendencia_doc','$this->obs_pendencia','$this->cliente_id');";
     }
 
+    public static function getQuerySelect(){
+        return "SELECT * FROM `processo`;";
+    }
+    
+    public static function getQuerySelectBy($campo, $valor){
+        return "SELECT * FROM `processo` WHERE $campo = '$valor';";
+    }
+    
+    
 
     
     

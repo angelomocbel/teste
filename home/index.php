@@ -4,7 +4,41 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<?php require_once '../classes/ClienteDAO.php'; ?>
+<?php require_once '../classes/Sistema.php';
+    $titulo = 'Bem-vindo, selecione uma opção no menu lateral';
+    $pagina = "";
+    if (isset($_GET['opcao'])) {
+        switch ($_GET['opcao']) {
+            case 'novo':
+                $titulo = 'Cadastrar Novo Cliente';
+                $pagina = './formulario_novocliente.php';
+                break;
+            case 'novoprocesso':
+                $titulo = 'Cadastrar Novo Processo';
+                $pagina =  './formulario_novoprocesso.php';
+                break;
+            case 'busca':
+                $titulo = 'Buscar Clientes';
+                $pagina = './buscar_cliente.php';
+                break;
+            case 'operacao':
+                $titulo = "Operações"; 
+                $pagina = './operacao.php';
+                break;
+            case 'operacao_processo':
+                $titulo = "Operações de processo"; 
+                $pagina = './operacao_processo.php';
+                break;
+             case 'info':
+                $titulo = "Informações do Cliente"; 
+                $pagina = './info.php';
+                break;
+            default:
+                $titulo = "Desculpe, página não encontrada";
+                $pagina = "";
+        }
+    }
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -13,7 +47,8 @@ and open the template in the editor.
         <script src="../resource/js/jquery.maskedinput.js" type="text/javascript"></script>
         <script src="../resource/js/minhasfuncoes.js" type="text/javascript"></script>
         <link href="../resource/css/novoestilo.css" rel="stylesheet" type="text/css"/>
-        <title></title>
+        <link rel="shortcut icon" href="../resource/img/favicon.png">
+        <title>M&M Advocacia Previdenciária</title>
     </head>
     <body>
         <div id="corpo">
@@ -24,6 +59,7 @@ and open the template in the editor.
             <tr>
                 <td id="menu" rowspan="2">
                     <ul id="opcoes">
+                        <li><a title="Voltar para o Início" href="?"><img src="../resource/img/home.png" alt="home"/></a></li>
                         <li><a title="Cadastrar Novo Cliente" href="?opcao=novo"><img src="../resource/img/novo_add.png" alt="novo_cliente"/></a></li>
                         <li><a title="Realizar Buscas" href="?opcao=busca"><img src="../resource/img/novo_search.png" alt=""/></a></li>
                         <li><a title="Exibir Relatórios" href="?opcao=lista"><img src="../resource/img/novo_list.png" alt=""/></a></li>
@@ -34,28 +70,17 @@ and open the template in the editor.
                     
                     
                 </td>
-                <td id="titulo">Titulo da operação</td>
+                <td id="titulo">
+                    <?php echo $titulo; ?>
+                </td>
             </tr>
             <tr>
                 <td id="conteudo">
+                   
                     <?php
-                    if (isset($_GET['opcao'])) {
-                        switch ($_GET['opcao']) {
-                            case 'novo':
-                                include './formulario_novocliente.php';
-                                break;
-                            case 'busca':
-                                include './buscar_cliente.php';
-                                break;
-                            case 'retorno':
-                                include './operacao.php';
-                                break;
-                            default:
-                                echo 'Operação inválida';
+                        if($pagina != ""){
+                            include_once $pagina;
                         }
-                    } else {
-                        echo 'Selecione uma operação';
-                    }
                     ?>
                 </td>
             </tr>

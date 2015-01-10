@@ -1,7 +1,9 @@
 $(document).ready(function () {
     $("#nascimento").mask("99/99/9999");
-    $("#cpf").mask("999.999.999-99");
+    $("#cpf").mask("99999999999");
     $("#rg").mask("9999999");
+    $("#data_audiencia").mask("99/99/9999-99:99");
+    $("#data_pericia").mask("99/99/9999-99:99");
     $("#novoCliente").validate({
         // Define as regras
         rules: {
@@ -45,6 +47,40 @@ $(document).ready(function () {
                 required: "Digite o seu e-mail para contato",
                 email: "Digite um e-mail válido"
             }            
+        }
+    });
+    $("#novoProcesso").validate({
+        // Define as regras
+        rules: {
+            numero: {
+                // campoNome será obrigatorio (required) e terá tamanho minimo (minLength)
+                required: true, minlength: 2
+            },
+            especie: {
+                required: true
+            },
+            vara: {
+                required: true
+            },
+            status: {
+                required: true
+            }
+        },
+        // Define as mensagens de erro para cada regra
+        messages: {
+            numero: {
+                required: "Informe o número do processo",
+                minlength: "O seu nome deve conter, no mínimo, 2 caracteres"
+            },
+            especie: {
+                required: "Selecione uma espécie"
+            },
+            vara: {
+                required: "Informe a vara do processo"
+            },
+            status: {
+                required: "Selecione um Status"
+            }
         }
     });
 });

@@ -7,9 +7,21 @@ input.botao{
     float: right;
     margin: 5px;
     height: 25px;
-    color: #3399ff;
+    color: #96281B;
     background-color: #ffffff;
-    border: 1px #3399ff solid;
+    border: 1px #96281B solid;
+}
+
+sucess{
+    color: #009900;
+}
+
+erro{
+    color: #ff3333;
+}
+
+table#formulario{
+    font-size: 11pt;
 }
 
 div#corpo{
