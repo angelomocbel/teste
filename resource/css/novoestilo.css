@@ -20,6 +20,22 @@ erro{
     color: #ff3333;
 }
 
+pequeno{
+    color: #999999;
+    font-size: 10pt;
+}
+
+table#info{
+    font-size: 12pt;
+    
+}
+table#info tr td#dados{
+   width: 500px;
+}
+table#info tr td#acoes{
+   width: 200px;
+}
+
 table#formulario{
     font-size: 11pt;
 }

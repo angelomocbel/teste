@@ -25,7 +25,7 @@ if (isset($_GET['acao'])) {
     $tipo = $_GET['tipo'];
     $clientes = $dao->getClienteBy($tipo, $busca);
     if($clientes != null){
-        echo "<fieldset><legend>Resultados</legend><table id='resultado'>";
+        echo "<fieldset><legend>Resultados para '$busca'</legend><table id='resultado'>";
         foreach ($clientes as $c){    
 ?>
 
@@ -42,6 +42,8 @@ if (isset($_GET['acao'])) {
 <?php
         }
         echo '</table></fieldset>';
+    }else{
+        echo "Nenhum registro encontrado para '$busca'";
     }   
 }
 ?>

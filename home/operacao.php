@@ -21,7 +21,7 @@
     <table>
         <tr>
             <td>
-                <input class="botao" type="button" value="Cadastrar um processo" onclick="location.href='/teste/home/?opcao=novoprocesso&id=<?php echo $id; ?>'"/>
+                <input class="botao" type="button" value="Cadastrar um processo" onclick="location.href='/teste/home/?opcao=novoprocesso&cliente_id=<?php echo $id; ?>'"/>
                 <input class="botao" type="button" value="Novo Cliente" onclick="location.href='/teste/home/?opcao=novo'"/>
                 <input class="botao" type="button" value="Ver Info. do Cliente cadastrado" onclick="location.href='/teste/home/?opcao=info&id=<?php echo $id; ?>'"/>
             </td>
