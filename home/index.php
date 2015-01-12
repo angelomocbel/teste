@@ -33,6 +33,10 @@ and open the template in the editor.
                 $titulo = "Informações do Cliente"; 
                 $pagina = './info.php';
                 break;
+             case 'infoprocesso':
+                $titulo = "Informações do Processo"; 
+                $pagina = './info_processo.php';
+                break;
             default:
                 $titulo = "Desculpe, página não encontrada";
                 $pagina = "";

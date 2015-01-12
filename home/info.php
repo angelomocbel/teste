@@ -33,14 +33,19 @@ if(isset($_GET['id'])){
             <td id="acoes">
                 <fieldset>
                     <legend>Processos</legend>
+                    <table>
 <?php
     if($processos != null){
-        foreach ($processos as $c) {
-            
+        foreach ($processos as $p) {
+?>
+                    <tr><td><a href="/teste/home/?opcao=infoprocesso&numero=<?php echo $p->getNumero();?>"><?php echo $p->getNumero();?></a></td></tr>               
+<?php
         }
     }
 
-?>               
+?>
+                <input class="botao" type="button" value="Cadastrar um processo" onclick="location.href='/teste/home/?opcao=novoprocesso&cliente_id=<?php echo $id; ?>'"/>
+                </table>
                 </fieldset>
             </td>
         </tr>
